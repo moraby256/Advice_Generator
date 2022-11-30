@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&family=Outfit:wght@400;700&display=swap');
+body{
+  height: 100vh;
+  background-color: hsl(218, 23%, 16%);
+  font-family: 'Manrope';
+}
+main{
+  display: grid;
+  place-items: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main section{
+  background-color: hsl(217, 19%, 24%);
+  width: 500px;
+  aspect-ratio: 7/4;
+  display: grid;
+  place-items: center;
+  position: relative;
+  border-radius: 10px;
+}
+main section h3{
+  margin: 25px 0;
+  letter-spacing: 0.3rem;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: hsl(150, 100%, 66%);
+}
+main section .quote{
+  color: hsl(193, 38%, 86%);
+  font-size: 28px;
+  word-break: break-word;
+  text-align: center;
+  margin: 0 20px;
+}
+picture {
+  margin: 30px 0;
+}
+main section button{
+  background-color: hsl(150, 100%, 66%);
+  border: none;
+  padding: 20px;
+  border-radius: 50%;
+  position: relative;
+  position: absolute;
+  bottom: -50px;
+  z-index: 1;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+main section button:hover{
+  box-shadow: 0 0 30px hsl(150, 100%, 66%);
+  transition: 0.3s all;
+}
+main section button:hover img{
+ animation: rotate-right-left 1s infinite alternate;
+}
+@keyframes rotate-right-left {
+  from{
+    transform: rotateZ(45deg);
+  }
+  to{
+    transform: rotateZ(-45deg);
+  }
+}
+@media (max-width: 500px) {
+    main section{
+     width: 300px;
+     aspect-ratio: 3/3;
+    }
+}
